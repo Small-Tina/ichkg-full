@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model practitioner {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  gender      Int?
+  birth_year  Int?
+  death_year  Int?
+  role_type   String?
+  school_name String?
+  title_level String?
+  bio         String?
+}
