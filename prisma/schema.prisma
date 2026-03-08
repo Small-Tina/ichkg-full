@@ -19,3 +19,13 @@ model practitioner {
   title_level String?
   bio         String?
 }
+
+model IchProject {
+  id           Int     @id @default(autoincrement())
+  protect_unit String  @unique
+  order        Int?
+  title        String?
+  province     String?
+  num          String?
+  type         String?
+}
