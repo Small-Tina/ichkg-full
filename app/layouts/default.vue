@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <header>
+    <div class="h-screen overflow-hidden">
+        <header class="fixed top-0 left-0 right-0 z-50">
             <UContainer class="flex items-center justify-between px-4 mt-3 h-12 bg-gray-200 rounded-md shadow-sm">
                 <UContainer>
-                    <h1 class="flex items-center gap-2 text-2xl font-semibold">
+                    <h1 class="flex items-center gap-2 text-xl font-semibold">
                         <UIcon name="i-heroicons-circle-stack-16-solid" class="w-7 h-7 text-primary" />
                         京剧知识图谱
                     </h1>
@@ -13,7 +13,7 @@
                 </UContainer>
             </UContainer>
         </header>
-        <main>
+        <main class="pt-16 h-full overflow-hidden">
             <slot />
         </main>
     </div>

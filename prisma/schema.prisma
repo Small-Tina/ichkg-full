@@ -9,8 +9,8 @@ datasource db {
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model practitioner {
-  id          Int     @id @default(autoincrement())
-  name        String  @unique
+  id          Int?
+  name        String?
   gender      Int?
   birth_year  Int?
   death_year  Int?
@@ -18,14 +18,16 @@ model practitioner {
   school_name String?
   title_level String?
   bio         String?
+
+  @@ignore
 }
 
-model IchProject {
-  id           Int     @id @default(autoincrement())
-  protect_unit String  @unique
+model project {
   order        Int?
+  id           Int     @id @default(autoincrement())
   title        String?
   province     String?
-  num          String?
+  protect_unit String?
   type         String?
+  num          String?
 }
